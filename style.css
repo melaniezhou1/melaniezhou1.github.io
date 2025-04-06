@@ -1,0 +1,368 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: local('Georgia');
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-theme {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+.dark-theme {
+    background-color: #000;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Navigation */
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-link {
+    font-size: 18px;
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    stroke: currentColor;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.subtitle {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.footer-text {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.arrow {
+    font-size: 36px;
+    animation: bounce 2s infinite;
+    color: black;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Publications Page Styles */
+.publications {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.publication {
+    margin: 10px 0;
+    font-style: italic;
+}
+
+.publication-link {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Work Page Styles */
+
+.work-content {
+    padding-top: 60px;
+}
+
+.work-title {
+    font-size: 48px;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.work-items {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.work-item {
+    border: 1px solid #333;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.dark-theme .work-item {
+    border-color: #fff;
+}
+
+.work-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bessemer-logo {
+    font-size: 18px;
+    text-align: right;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.bessemer-slashes {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.stanford-logo {
+    font-weight: bold;
+}
+
+.social-links {
+    display: flex; /* Use flexbox to align items horizontally */
+    gap: 10px; /* Add spacing between the icons */
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Align icons vertically */
+    margin: 50px 0; /* Add margin to the top and bottom */
+}
+
+.social-link {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.social-icon {
+    width: 40px; /* Set a consistent width */
+    height: 40px; /* Automatically adjust height to maintain aspect ratio */
+    object-fit: cover; /* Ensures the image fits within the bounds without distortion */
+}
+
+.dark-theme .social-link {
+    background-color: #fff;
+    color: #000;
+}
+
+.work-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+}
+
+.unicorn-link {
+    position: absolute;
+    top: 20px; /* Adjust the distance from the top */
+    left: 20px; /* Adjust the distance from the left */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    text-decoration: none; /* Remove underline if any */
+}
+
+.unicorn-icon {
+    width: 50px; /* Adjust the size of the icon */
+    height: 50px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Back Arrow */
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+}
+
+.back-arrow {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Back Arrow */
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+}
+
+.back-arrow {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Main Content */
+.agentforce-content {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    box-sizing: border-box;
+}
+
+/* Title and Subtitle */
+.agentforce-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.agentforce-subtitle {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.agentforce-role {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+/* Image Section */
+.agentforce-image-placeholder {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto 30px;
+    overflow: hidden;
+}
+
+.agentforce-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures the image fits within the box */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Details Section */
+.agentforce-details {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.agentforce-link {
+    color: #000;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.agentforce-link:hover {
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .title {
+        font-size: 36px;
+    }
+    
+    .subtitle {
+        font-size: 20px;
+    }
+    
+    .work-items {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 32px;
+    }
+    
+    .work-title {
+        font-size: 36px;
+    }
+}
